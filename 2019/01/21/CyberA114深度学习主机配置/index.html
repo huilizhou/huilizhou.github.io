@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Cyber_A114-Deep learning server configuration | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="配置环境（注意cuda和cudnn的版本，高级版本tensorflow不支持）： ubuntu 16.04 + 双GTX 1080 Ti + Tensorflow 1.10 + Anaconda 5.2  安装nvidia驱动：  打开软件更新器 - 附加驱动 – 选择显示出来的驱动，点击下方的应用更改，装好重启。 装完之后分辨率有问题，暂时不用管，后续解决。  安装cuda 9.0及其补丁（4个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cyber_A114-Deep learning server configuration">
+<meta property="og:url" content="http://yoursite.com/2019/01/21/CyberA114深度学习主机配置/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="配置环境（注意cuda和cudnn的版本，高级版本tensorflow不支持）： ubuntu 16.04 + 双GTX 1080 Ti + Tensorflow 1.10 + Anaconda 5.2  安装nvidia驱动：  打开软件更新器 - 附加驱动 – 选择显示出来的驱动，点击下方的应用更改，装好重启。 装完之后分辨率有问题，暂时不用管，后续解决。  安装cuda 9.0及其补丁（4个">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-01-21T07:50:12.764Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cyber_A114-Deep learning server configuration">
+<meta name="twitter:description" content="配置环境（注意cuda和cudnn的版本，高级版本tensorflow不支持）： ubuntu 16.04 + 双GTX 1080 Ti + Tensorflow 1.10 + Anaconda 5.2  安装nvidia驱动：  打开软件更新器 - 附加驱动 – 选择显示出来的驱动，点击下方的应用更改，装好重启。 装完之后分辨率有问题，暂时不用管，后续解决。  安装cuda 9.0及其补丁（4个">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-CyberA114深度学习主机配置" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/21/CyberA114深度学习主机配置/" class="article-date">
+  <time datetime="2019-01-20T16:00:00.000Z" itemprop="datePublished">2019-01-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/DeepLearning/">DeepLearning</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Cyber_A114-Deep learning server configuration
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>配置环境（注意cuda和cudnn的版本，高级版本tensorflow不支持）：</p>
+<p>ubuntu 16.04 + 双GTX 1080 Ti + Tensorflow 1.10 + Anaconda 5.2</p>
+<ol>
+<li>安装nvidia驱动：</li>
+</ol>
+<p>打开软件更新器 - 附加驱动 – 选择显示出来的驱动，点击下方的应用更改，装好重启。</p>
+<p>装完之后分辨率有问题，暂时不用管，后续解决。</p>
+<ol start="2">
+<li>安装cuda 9.0及其补丁（4个）</li>
+</ol>
+<p>官网：<br><a href="https://developer.nvidia.com/cuda-90-download-archive?target_os=Linux&amp;target_arch=x86_64&amp;target_distro=Ubuntu&amp;target_version=1704&amp;target_type=runfilelocal" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-90-download-archive?target_os=Linux&amp;target_arch=x86_64&amp;target_distro=Ubuntu&amp;target_version=1704&amp;target_type=runfilelocal</a></p>
+<p>坑：安装过程中如果出现：Error: unsupported compiler: 7.3.0<br>解决方案：</p>
+<p><a href="https://blog.csdn.net/qq_20091945/article/details/80385079" target="_blank" rel="noopener">https://blog.csdn.net/qq_20091945/article/details/80385079</a></p>
+<p>sudo apt install gcc-6 g++-6<br>sudo ln -s /usr/bin/gcc-6 /usr/local/bin/gcc<br>sudo ln -s /usr/bin/g++-6 /usr/local/bin/g++</p>
+<ol start="3">
+<li>安装cudnn7.0（需要nvidia的账号）<br>官网：<br><a href="https://developer.nvidia.com/rdp/form/cudnn-download-survey" target="_blank" rel="noopener">https://developer.nvidia.com/rdp/form/cudnn-download-survey</a><br>账号：<a href="mailto:ex2tron@foxmail.com" target="_blank" rel="noopener">ex2tron@foxmail.com</a></li>
+</ol>
+<p>点击下方的“Archived cuDNN Releases ”，才能找到就的cudnn版本</p>
+<p>Download cuDNN v7.0.5 (Dec 5, 2017), for CUDA 9.0</p>
+<p>cuDNN v7.0.5 Library for Linux</p>
+<p>下载完成后解压，执行：<br>sudo cp cuda/include/cudnn.h /usr/local/cuda-9.0/include<br>sudo cp cuda/lib64/libcudnn<em> /usr/local/cuda-9.0/lib64<br>sudo chmod a+r /usr/local/cuda-9.0/include/cudnn.h /usr/local/cuda-9.0/lib64/libcudnn</em></p>
+<ol start="4">
+<li>安装Anaconda</li>
+</ol>
+<p>下载Anaconda.sh安装</p>
+<ol start="5">
+<li>安装tensorflow-gpu版本：</li>
+</ol>
+<p>pip install tensorflow-gpu</p>
+<p>坑：装完，import tensorflow时出现：ImportError: libcublas.so.9.0: cannot open shared object file: No such file or director<br>解决方案：cuda未添加到环境变量，执行下面三条指令：</p>
+<p>export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64<br>export PATH=$PATH:/usr/local/cuda-9.0/bin<br>export CUDA_HOME=$CUDA_HOME:/usr/local/cuda-9.0</p>
+<p>最后来解决分辨率的问题:</p>
+<p>首先将显示器连接一台正常分辨率，如1920*1080的机器上，打开显示器的设置，可以看到显示器当前的水平和垂直分辨率，这个很重要！！！</p>
+<p>如果/etc/X11/xorg.conf存在，直接修改，不存在的话：</p>
+<p>1.先执行  sudo nvidia-settings</p>
+<ol start="2">
+<li>然后将配置文件保存到 /etc/X11/xorg.conf</li>
+<li>修改xorg.conf文件</li>
+</ol>
+<p>修改一：<br>Section “Monitor”</p>
+<pre><code># HorizSync source: builtin, VertRefresh source: builtin
+Identifier     &quot;Monitor0&quot;
+VendorName     &quot;Unknown&quot;
+ModelName      &quot;DFP-1&quot;
+HorizSync       28.0 - 67.0
+VertRefresh     43.0 - 60.0
+Option         &quot;DPMS&quot;
+</code></pre><p>EndSection</p>
+<p>标记黄色的两个部分更改为你前面看到的刷新率。</p>
+<p>修改二：<br>Section “Screen”<br>    Identifier     “Screen0”<br>    Device         “Device0”<br>    Monitor        “Monitor0”<br>    DefaultDepth    24<br>    Option         “Stereo” “0”<br>    Option         “nvidiaXineramaInfoOrder” “DFP-1”<br>    Option         “metamodes” “1920x1080_60 +0+0”<br>    Option         “SLI” “Off”<br>    Option         “MultiGPU” “Off”<br>    Option         “BaseMosaic” “off”<br>    SubSection     “Display”<br>        Depth       24<br>    EndSubSection<br>EndSection</p>
+<p>标记黄色的部分更改为你正常的分辨率，60表示刷新率</p>
+<p>保存重启后，在更改分辨率的地方就可以更改了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/21/CyberA114深度学习主机配置/" data-id="cjr64kqht0001gsvmmn2s0yfl" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/01/21/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/01/21/ubuntu_Faster_RCNN_gongjian说明文档/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">ubuntu_Faster-RCNN_gongjian_Documentation</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/DeepLearning/">DeepLearning</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/01/21/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/21/CyberA114深度学习主机配置/">Cyber_A114-Deep learning server configuration</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/21/ubuntu_Faster_RCNN_gongjian说明文档/">ubuntu_Faster-RCNN_gongjian_Documentation</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/21/ubuntu_YOLO_gongjian说明文档/">ubuntu_YOLO_gongjian_Documentation</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

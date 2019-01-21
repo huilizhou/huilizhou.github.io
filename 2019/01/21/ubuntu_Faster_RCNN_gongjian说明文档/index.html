@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>ubuntu_Faster-RCNN_gongjian_Documentation | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="六种工件是扳手(banshou)、测电笔(cedianbi)、锤子(chuizi)、卷尺(juanchi)、墙纸刀(qiangzhidao)、钳子(qianzi) 输入的指令https://blog.csdn.net/wei_guo_xd/article/details/78585555?locationNum=10&amp;amp;fps=1在research 目录下  添加环境变量export PYT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ubuntu_Faster-RCNN_gongjian_Documentation">
+<meta property="og:url" content="http://yoursite.com/2019/01/21/ubuntu_Faster_RCNN_gongjian说明文档/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="六种工件是扳手(banshou)、测电笔(cedianbi)、锤子(chuizi)、卷尺(juanchi)、墙纸刀(qiangzhidao)、钳子(qianzi) 输入的指令https://blog.csdn.net/wei_guo_xd/article/details/78585555?locationNum=10&amp;amp;fps=1在research 目录下  添加环境变量export PYT">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-01-21T07:48:18.671Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ubuntu_Faster-RCNN_gongjian_Documentation">
+<meta name="twitter:description" content="六种工件是扳手(banshou)、测电笔(cedianbi)、锤子(chuizi)、卷尺(juanchi)、墙纸刀(qiangzhidao)、钳子(qianzi) 输入的指令https://blog.csdn.net/wei_guo_xd/article/details/78585555?locationNum=10&amp;amp;fps=1在research 目录下  添加环境变量export PYT">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-ubuntu_Faster_RCNN_gongjian说明文档" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/21/ubuntu_Faster_RCNN_gongjian说明文档/" class="article-date">
+  <time datetime="2019-01-20T16:00:00.000Z" itemprop="datePublished">2019-01-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/DeepLearning/">DeepLearning</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ubuntu_Faster-RCNN_gongjian_Documentation
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="六种工件是"><a href="#六种工件是" class="headerlink" title="六种工件是"></a>六种工件是</h4><p>扳手(banshou)、测电笔(cedianbi)、锤子(chuizi)、卷尺(juanchi)、墙纸刀(qiangzhidao)、钳子(qianzi)</p>
+<h3 id="输入的指令"><a href="#输入的指令" class="headerlink" title="输入的指令"></a>输入的指令</h3><p><a href="https://blog.csdn.net/wei_guo_xd/article/details/78585555?locationNum=10&amp;fps=1" target="_blank" rel="noopener">https://blog.csdn.net/wei_guo_xd/article/details/78585555?locationNum=10&amp;fps=1</a><br>在research 目录下</p>
+<ol>
+<li><p>添加环境变量<br><code>export PYTHONPATH=$PYTHONPATH:</code>pwd<code>:</code>pwd<code>/slim</code></p>
+</li>
+<li><p>创建数据集<br><code>python object_detection/dataset_tools/create_gongjian_tf_record_ex2tron.py --data_dir=object_detection/gongjian_datas --output_dir=object_detection/gongjian_datas/output_datasets</code></p>
+</li>
+<li><p>选择配置模型<br>所有模型介绍及下载：<a href="https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md" target="_blank" rel="noopener">https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md</a></p>
+</li>
+</ol>
+<p>这边选择的是“faster_rcnn_resnet101”<br>复制<code>object_detection/samples/configs</code><br>修改其中的配置<br>（我已经修改好了，改名为<code>faster_rcnn_resnet101_gongjian.config</code>）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">num_classes # 分类数 9行</span><br><span class="line">fine_tune_checkpoint # 调用的模型地址 106行</span><br><span class="line"></span><br><span class="line">train_input_reader: input_path # 训练集的地址 116行</span><br><span class="line">train_input_reader: label_map_path # 标签文件地址 118行</span><br><span class="line">eval_input_reader: input_path # 评估集的地址 130行</span><br><span class="line">eval_input_reader: label_map_path # 标签文件地址 132行</span><br></pre></td></tr></table></figure></p>
+<ol start="4">
+<li><p>开始训练<br><code>python object_detection/train.py --logtostderr --pipeline_config_path=object_detection/samples/configs/faster_rcnn_resnet101_gongjian.config --train_dir=object_detection/gongjian_datas/tune_checkpoints</code></p>
+</li>
+<li><p>评估模型<br><code>python object_detection/eval.py --logtostderr --checkpoint_dir=object_detection/gongjian_datas/tune_checkpoints --pipeline_config_path=object_detection/samples/configs/faster_rcnn_resnet101_gongjian.config --eval_dir=object_detection/gongjian_datas/eval_output</code></p>
+</li>
+</ol>
+<ol start="6">
+<li>导出PB模型(可选)</li>
+</ol>
+<p><code>python object_detection//export_inference_graph.py --input_type=image_tensor --pipeline_config_path=object_detection/samples/configs/faster_rcnn_resnet101_gongjian.config --trained_checkpoint_prefix=object_detection/gongjian_datas/tune_checkpoints/model.ckpt-50237 --output_directory=object_detection/gongjian_datas/saved_model</code></p>
+<ol start="7">
+<li>调用生成的模型：</li>
+</ol>
+<p>复制并修改<code>object_detection_tutorial.py</code>（我已经修改好了，改名为<code>object_detection_tutorial_ex2tron.py</code>）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PATH_TO_CKPT # 模型地址 26行</span><br><span class="line">PATH_TO_LABELS # 标签文件地址 28行</span><br><span class="line">NUM_CLASSES # 分类数目 29行</span><br></pre></td></tr></table></figure>
+<p>最后将测试的图片放在<code>object_detection/test_images/</code>下，运行如下指令即可：</p>
+<p><code>python object_detection/object_detection_tutorial.py</code></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/21/ubuntu_Faster_RCNN_gongjian说明文档/" data-id="cjr64kqhw0002gsvmth7nl1qh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/01/21/CyberA114深度学习主机配置/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Cyber_A114-Deep learning server configuration
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/01/21/ubuntu_YOLO_gongjian说明文档/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">ubuntu_YOLO_gongjian_Documentation</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/DeepLearning/">DeepLearning</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/01/21/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/21/CyberA114深度学习主机配置/">Cyber_A114-Deep learning server configuration</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/21/ubuntu_Faster_RCNN_gongjian说明文档/">ubuntu_Faster-RCNN_gongjian_Documentation</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/21/ubuntu_YOLO_gongjian说明文档/">ubuntu_YOLO_gongjian_Documentation</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
